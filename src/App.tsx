@@ -1,9 +1,10 @@
-import "./App.css";
+//import context
 import { AuthContextComponent } from "./context/AuthContext/authContext";
-import { RoutesMap } from "./routes/routes";
-import { GlobalStyles } from "./styles/resetStyle";
+//import components
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { RoutesMap } from "./routes/routes";
+import { GlobalStyles } from "./styles/resetStyle";
 
 function App() {
   return (

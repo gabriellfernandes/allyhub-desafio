@@ -1,27 +1,27 @@
 //import hooks
-import { useNavigate } from "react-router-dom";
-//import image
-import travel from "../../assets/img/travel.png";
+import { Link } from "react-router-dom";
+//import images
+import logo from "../../assets/img/logo.png";
+import world from "../../assets/svg/world.svg"
 //import components
-import { Conteiner, ImageConteiner, ConteinerButton } from "./styled";
+import { Conteiner, ConteinerButton, ImageConteiner } from "./styled";
+
+
 
 export const LandingPage = () => {
-  const navigate = useNavigate();
 
   return (
     <Conteiner>
       <ConteinerButton>
-        <div className="top"></div>
-        <img src={travel} alt="vector" />
-        <p>Descubra seu próximo destino!</p>
-        <button onClick={() => navigate("/register")}>Embarca</button>
+        <img src={logo} />
+        <p>Descubra seu próximo destino.</p>
+        <Link to={"/register"}>Embarcar</Link>
         <div className="bottom"></div>
       </ConteinerButton>
       <ImageConteiner>
-        <img src={travel} alt="vector" />
-        <div className="top"></div>
-        <div className="bottom"></div>
+        <img src={world} />
       </ImageConteiner>
+      <div className="vector"></div>
     </Conteiner>
   );
 };

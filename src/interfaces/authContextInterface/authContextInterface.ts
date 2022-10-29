@@ -52,6 +52,7 @@ export interface DataValueInterface {
   name: string;
   email: string;
   password: string;
+  confirmpassword: string;
   telephone: string;
   cpf: string;
   cities: string[];

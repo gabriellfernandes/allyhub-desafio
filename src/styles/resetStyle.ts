@@ -76,16 +76,9 @@ export const GlobalStyles = createGlobalStyle`
 
     :root {  
         --fontText: 'News Cycle', sans-serif;
-        
-        --backgroundColor: #F7F9FF;
-
-        --buttonColor: #FF914D;
+        --backgroundColor:#dce9ff;
+        --buttonColor: #448bff;
         --buttonTextColor: white;
-        --buttonTextColorHover: white;
-        --buttonHover: #c77dff;
-        --buttonBoxShadown: #FAD2BC;
-        --buttonBoxShadownHover: #e0aaff;
-
-        --divBackgroundColor: #8C5BF1;
+        --formColor: #ffffff;
     }
 `;
