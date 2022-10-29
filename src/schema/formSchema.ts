@@ -15,10 +15,10 @@ export const formSchema = yup.object().shape({
     .string()
     .required("Confirme sua senha")
     .oneOf([yup.ref("password")], "Senhas não correspondem"),
-  cpf: yup.string().required("CPF Obrigatorio"),
+  cpf: yup.string().required("CPF Obrigatorio").matches(/^([0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2})$/, "Digite um CPF válido"),
   telephone: yup
     .string()
-    .required("Telefone Obrigatorio")
+    .required("Telefone Obrigatorio").matches(/((\d{2})\s)(\d{4,5}-\d{4})/g, "Digite um número válido")
     .min(10, "digite seu numero completo"),
   countries: yup
     .array()

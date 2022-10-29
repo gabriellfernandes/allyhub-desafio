@@ -63,7 +63,7 @@ export const AuthContextComponent = ({
         .catch((err) => console.log(err))
 
     countryValues.length != 0 && filterCountry(countryValues);
-  }, []);
+  }, [countryValues]);
 
   useEffect(() => {
     filterCountry(countryValues);
@@ -104,10 +104,10 @@ export const AuthContextComponent = ({
     );
 
     if (filtredCountry.length != 0) {
+      setLoading(false)
       setFiltredCountry(
         filtredCountry.filter((elem, i) => elem != filtredCountry[i + 1])
       );
-      setLoading(false);
     }
   };
 
