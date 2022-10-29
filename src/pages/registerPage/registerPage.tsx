@@ -272,7 +272,7 @@ export const RegisterPage = () => {
                 )
               }
               component={InputMask}
-              mask="(99) 9999-99999"
+              mask="(99) 99999-9999"
               inputWrapperOrder={["input"]}
               radius="xl"
               size="md"
