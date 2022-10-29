@@ -12,6 +12,8 @@ países.
 Para criação do formulário utilizei a lib react-hook-form e para as validações utilizei a lib yup, 
 para os input e o multiSelect utilizei a lib Mantine,
 
+link site: https://vemviajar.vercel.app
+
 Site visual.
 ![image](https://user-images.githubusercontent.com/96635752/198851492-9636dd22-ff22-4648-82f1-692bdc281f41.png)
 
