@@ -18,8 +18,7 @@ export const formSchema = yup.object().shape({
   cpf: yup.string().required("CPF Obrigatorio").matches(/^([0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2})$/, "Digite um CPF válido"),
   telephone: yup
     .string()
-    .required("Telefone Obrigatorio").matches(/((\d{2})\s)(\d{4,5}-\d{4})/g, "Digite um número válido")
-    .min(10, "digite seu numero completo"),
+    .required("Telefone Obrigatorio").min(15,"Telefone inválido!").matches(/^(?:(?:\+|00)?(55)\s?)?(?:\(?([1-9][0-9])\)?\s?)?(?:((?:9\d|[2-9])\d{3})\-?(\d{4}))$/, "Telefone Inválido"),
   countries: yup
     .array()
     .required("Selecione pelo menos 1 Item")
