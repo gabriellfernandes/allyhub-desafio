@@ -1,12 +1,10 @@
 import { ReactNode } from "react";
 
 export interface AuthContextInterface {
-  city: CityResultsInterFace[];
-  country: CountryResultsInterface[];
   loading: boolean;
-  cityValues: ResultsValuesInterface[];
-  countryValues: ResultsValuesInterface[];
   filtredCountry: FiltredValuesInterface[];
+  filtredCity:  FiltredValuesInterface[];
+  handleSubmitFunction: (data: DataValueInterface) => DataValueInterface
 }
 
 export interface AuthContextComponentInterface {
@@ -18,6 +16,7 @@ export interface CountryResultsInterface {
   name_ptbr: string;
   name: string;
   country_code?: string;
+  group?: string;
 }
 
 export interface CityResultsInterFace extends CountryResultsInterface {
@@ -29,12 +28,14 @@ export interface CityResultsInterFace extends CountryResultsInterface {
   log: string;
   url1: string | null;
   url2: string | null;
+  group?: string;
 }
 
 export interface ResultsValuesInterface {
   value: string;
   label: string;
   country_code: string | undefined;
+  group?: string;
 }
 
 
@@ -42,4 +43,18 @@ export interface FiltredValuesInterface {
   label: string;
   country_code: string | undefined;
   value: string;
+  group?: string;
 }
+
+
+//typagem do valor passado para função
+export interface DataValueInterface {
+  name: string;
+  email: string;
+  password: string;
+  telephone: string;
+  cpf: string;
+  cities: string[];
+  countries: string[];
+}
+

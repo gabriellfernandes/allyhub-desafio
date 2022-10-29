@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
+
 export const GlobalStyles = createGlobalStyle`
     html, body, div, span, applet, object, iframe,
     h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -31,6 +32,7 @@ export const GlobalStyles = createGlobalStyle`
         background: var(--color-grey-1);
         color: var(--color-grey-5);
         height: 100vh;
+        overflow-x: hidden;
     }
     ::-webkit-scrollbar {
         width: 10px;
@@ -73,10 +75,17 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     :root {  
-        --backGroundColor: #000000b2;
-        --hoverColor: rgb(0, 181, 237);
-        --colorSpan: #C4C9CD;
-        --colorTitle: rgba(255, 255, 255, 0.6);
-        --colorDropDown: whitesmoke;
+        --fontText: 'News Cycle', sans-serif;
+        
+        --backgroundColor: #F7F9FF;
+
+        --buttonColor: #FF914D;
+        --buttonTextColor: white;
+        --buttonTextColorHover: white;
+        --buttonHover: #c77dff;
+        --buttonBoxShadown: #FAD2BC;
+        --buttonBoxShadownHover: #e0aaff;
+
+        --divBackgroundColor: #8C5BF1;
     }
 `;

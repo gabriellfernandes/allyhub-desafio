@@ -1,13 +1,16 @@
-import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { RegistroPage } from "./pages/register/registerPage";
 import { AuthContextComponent } from "./context/AuthContext/authContext";
+import { RoutesMap } from "./routes/routes";
+import { GlobalStyles } from "./styles/resetStyle";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <AuthContextComponent>
-      <RegistroPage />
+      <GlobalStyles />
+      <ToastContainer />
+      <RoutesMap />
     </AuthContextComponent>
   );
 }
